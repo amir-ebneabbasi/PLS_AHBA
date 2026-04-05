@@ -36,7 +36,7 @@ run_pls_pipeline <- function(
   
   spins <- read.csv(paste0(base, spins_file))
   max_index <- nrow(spins) + 1
-  message("Max index in spins: ", max_index)
+  cat("Max index in spins: ", max_index)
   
   if (colnames(data)[1] != "ROI") {
     stop("Error: First column of 'data' must be 'ROI'")
