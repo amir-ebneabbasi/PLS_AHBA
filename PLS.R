@@ -145,7 +145,8 @@ run_pls_pipeline <- function(
   
   # -----------------------------------------------
   message("Step 5: FGSEA")
-  
+
+  # GO should be in .gmx.txt format
   CellPathways <- read.csv(
     paste0(base, pathways_file),
     header = TRUE,
