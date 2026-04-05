@@ -25,10 +25,9 @@ run_pls_pipeline <- function(
   
   AHBA <- read.csv(paste0(base, ahba_file))
   cat("Number of rows in AHBA:", nrow(AHBA), "\n")
-  
-  # Identify rows with all NA except ROI
-  removed_row_numbers <- which(rowSums(is.na(AHBA[, -1])) >= (ncol(AHBA) - 1))
-  AHBA <- AHBA[rowSums(is.na(AHBA[, -1])) < (ncol(AHBA) - 1), ]
+
+  removed_row_numbers <- which(rowSums(is.na(AHBA[, -which(names(AHBA) == "ROI")])) >= (ncol(AHBA) - 1))
+  AHBA <- AHBA[-removed_row_numbers, ]
   cat("Number of removed rows in AHBA:", length(removed_row_numbers), "\n")
   
   data <- read.csv(paste0(base, pheno_file))
