@@ -44,6 +44,21 @@ run_pls_pipeline <- function(
   if (colnames(AHBA)[1] != "ROI") {
     stop("Error: First column of 'AHBA' must be 'ROI'")
   }
+
+  missing_in_data <- setdiff(AHBA$ROI, data$ROI)
+  missing_in_ahba <- setdiff(data$ROI, AHBA$ROI)
+
+  if (length(missing_in_data) == 0 && length(missing_in_ahba) == 0) {
+    cat("All ROI values match between data and AHBA.\n")
+  } else {
+    cat("ROIs in AHBA but not in data:\n")
+    print(missing_in_data)
+  
+    cat("ROIs in data but not in AHBA:\n")
+    print(missing_in_ahba)
+  
+    stop("Error: ROI values do not match between data and AHBA. Execution stopped.")
+  }
   
   PLS_data <- inner_join(data, AHBA, by = "ROI")
   
