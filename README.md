@@ -36,7 +36,7 @@ Generates spatially constrained permutations to control for spatial autocorrelat
 - **Output:** ROI × nrot permutation index matrix
 
 ## 🧠 PLS + FGSEA Pipeline
-Links AHBA gene expression to brain phenotypes using PLS and explores pathway enrichment.*
+Links AHBA gene expression to brain phenotypes using PLS and explores pathway enrichment.
 
 ### Step 1 — Data Preprocessing
 - Removes genes with excessive missingness
