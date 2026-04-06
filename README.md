@@ -1,7 +1,4 @@
-# 🧠 PLS Pipeline for Imaging Transcriptomics
-
-*A complete workflow for imaging-transcriptomics analysis*
-
+# PLS Pipeline for Imaging Transcriptomics
 
 
 ## 📦 Data Requirements
