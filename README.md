@@ -21,7 +21,6 @@
 ### Pathways
 - Gene sets in GMX (tab-separated)
 
----
 
 ## 🔧 Pipeline Overview
 
@@ -39,7 +38,6 @@ Generates spatially constrained permutations to control for spatial autocorrelat
 - **Methods:** `"hungarian"`, `"vasa"`
 - **Output:** ROI × nrot permutation index matrix
 
----
 
 ## 🧠 PLS + FGSEA Pipeline
 
@@ -64,7 +62,6 @@ Generates spatially constrained permutations to control for spatial autocorrelat
 - Uses PLS1 component
 - Performs preranked gene set enrichment analysis (GSEA)
 
----
 
 ## 📤 Outputs
 
