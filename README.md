@@ -75,6 +75,5 @@ Generates spatially constrained permutations to control for spatial autocorrelat
 
 ### Results_FGSEA.csv
 - Enriched pathways
-- Includes:
-  - Normalized Enrichment Score (NES)
-  - Leading-edge genes
+- Normalized Enrichment Score (NES)
+- Leading-edge genes
